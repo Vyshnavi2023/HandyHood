@@ -23,7 +23,7 @@
           </div>
 
         <nav class="nav-links">
-            <a href="index.php">Home</a>
+            <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
@@ -32,43 +32,19 @@
         </nav>
         <!--action buttons-->
         <div class="active-btn">
-
-            <button id="joinWorkerBtn" class="worker-btn">Join as Worker</button>
-
-            <div id="workerModal" class="modal">
-                <div class="modal-content">
-                  <span id="closeModal" class="close">&times;</span>
-              
-                  <h2>Join as Worker</h2>
-                  <form id="workerForm">
-                    <input id="fullName" type="text" placeholder="Full Name" required>
-                  
-                    <input id="mobile" type="tel" placeholder="Mobile Number" required>
-                  
-                    <input id="password" type="password" placeholder="Password" required>
-                  
-                    <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
-                  
-                    <select id="category" required>
-                      <option value="">Select Work Category</option>
-                      <option>Electrician</option>
-                      <option>Plumber</option>
-                      <option>Carpenter</option>
-                      <option>Painter</option>
-                      <option>Cleaner</option>
-                    </select>
-                  
-                    <input id="city" type="text" placeholder="City / Area" required>
-                  
-                    <button type="submit">Join as Worker</button>
-                  </form>
-                  
-                </div>
-              </div>
-            <a href="#" class="book-btn">Book Now</a>
+            <button class="worker-btn" onclick="window.location.href='join.php'">
+              Join as Worker
+            </button>
+            <a href="login1.php" class="book-btn">Login</a>
         </div>
     </header>
-<h2>About HandyHood</h2>
+
+    <div class="page-header">
+        <h1>About HandyHood</h1>
+        <p>Your trusted partner for local services</p>
+    </div>
+
+    <main class="page-container about-text">
 <p>
 HandyHood connects local skilled workers with nearby households,
 making home services fast, affordable, and transparent.
@@ -79,7 +55,13 @@ making home services fast, affordable, and transparent.
     <li>Select location</li>
     <li>Choose service</li>
     <li>Contact worker directly</li>
-</ol>
+    </ol>
+    </main>
 
+    <footer>
+        <p>© 2026 HandyHood. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -24,7 +24,7 @@
           </div>
 
         <nav class="nav-links">
-            <a href="index.php">Home</a>
+            <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
@@ -33,48 +33,20 @@
         </nav>
         <!--action buttons-->
         <div class="active-btn">
-
-            <button id="joinWorkerBtn" class="worker-btn">Join as Worker</button>
-
-            <div id="workerModal" class="modal">
-                <div class="modal-content">
-                  <span id="closeModal" class="close">&times;</span>
-              
-                  <h2>Join as Worker</h2>
-                  <form id="workerForm">
-                    <input id="fullName" type="text" placeholder="Full Name" required>
-                  
-                    <input id="mobile" type="tel" placeholder="Mobile Number" required>
-                  
-                    <input id="password" type="password" placeholder="Password" required>
-                  
-                    <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
-                  
-                    <select id="category" required>
-                      <option value="">Select Work Category</option>
-                      <option>Electrician</option>
-                      <option>Plumber</option>
-                      <option>Carpenter</option>
-                      <option>Painter</option>
-                      <option>Cleaner</option>
-                    </select>
-                  
-                    <input id="city" type="text" placeholder="City / Area" required>
-                  
-                    <button type="submit">Join as Worker</button>
-                  </form>
-                  
-                </div>
-              </div>
-            <a href="#" class="book-btn">Book Now</a>
+            <button class="worker-btn" onclick="window.location.href='join.php'">
+              Join as Worker
+            </button>
+            <a href="login1.php" class="book-btn">Login</a>
         </div>
     </header>
     <!-- Header -->
     
-    <header>
+    <div class="page-header">
         <h1>Contact HandyHood</h1>
         <p>We’re here to help you with local services</p>
-    </header>
+    </div>
+
+    <main class="page-container">
 
     <!-- Contact Section -->
     <section>
@@ -82,42 +54,54 @@
 
         <form>
             <!-- Name -->
-            <label for="name">Full Name</label><br>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
 
             <!-- Email -->
-            <label for="email">Email Address</label><br>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
 
             <!-- Phone -->
-            <label for="phone">Phone Number</label><br>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
 
             <!-- Service Type -->
-            <label for="service">Service Needed</label><br>
-            <select id="service" name="service" required>
-                <option value="">-- Select Service --</option>
-                <option>Plumber</option>
-                <option>Electrician</option>
-                <option>Carpenter</option>
-                <option>Painter</option>
-                <option>Cleaning</option>
-                <option>Other</option>
-            </select><br><br>
+            <div class="form-group">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service" required>
+                    <option value="">-- Select Service --</option>
+                    <option>Plumber</option>
+                    <option>Electrician</option>
+                    <option>Carpenter</option>
+                    <option>Painter</option>
+                    <option>Cleaning</option>
+                    <option>Other</option>
+                </select>
+            </div>
 
             <!-- Message -->
-            <label for="message">Message</label><br>
-            <textarea id="message" name="message" rows="4" placeholder="Describe your problem"></textarea><br><br>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Describe your problem"></textarea>
+            </div>
 
             <!-- Submit -->
-            <button type="submit">Send Message</button>
+            <button type="submit" class="btn-primary">Send Message</button>
         </form>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 HandyHood | Local Services Made Easy</p>
+        <p>© 2026 HandyHood. All Rights Reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

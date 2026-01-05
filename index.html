@@ -82,7 +82,7 @@
       <button class="search-btn">Find Services</button>
     </div>
 
-    <div class="alert">
+    <div class="alert" onclick="document.getElementById('emergencyModal').style.display='flex'">
       Need immediate help? <strong>Find available workers now!</strong>
     </div>
   </div>
@@ -126,6 +126,24 @@
 <footer>
   <p>© 2026 HandyHood. All Rights Reserved.</p>
 </footer>
+
+<!-- Emergency Modal -->
+<div id="emergencyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('emergencyModal').style.display='none'">&times;</span>
+    <h2>Emergency Request</h2>
+    <input type="text" placeholder="Your Name" aria-label="Your Name">
+    <input type="tel" placeholder="Phone Number" aria-label="Phone Number">
+    <select aria-label="Service Need">
+      <option>Select Issue</option>
+      <option>Plumbing Emergency</option>
+      <option>Electrical Failure</option>
+      <option>Medical Assistance</option>
+      <option>Other</option>
+    </select>
+    <button onclick="alert('Request sent. Help is on the way!'); document.getElementById('emergencyModal').style.display='none'">Request Help Now</button>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>

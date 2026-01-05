@@ -33,55 +33,40 @@
         </nav>
         <!--action buttons-->
         <div class="active-btn">
-
-            <button id="joinWorkerBtn" class="worker-btn">Join as Worker</button>
-
-            <div id="workerModal" class="modal">
-                <div class="modal-content">
-                  <span id="closeModal" class="close">&times;</span>
-              
-                  <h2>Join as Worker</h2>
-                  <form id="workerForm">
-                    <input id="fullName" type="text" placeholder="Full Name" required>
-                  
-                    <input id="mobile" type="tel" placeholder="Mobile Number" required>
-                  
-                    <input id="password" type="password" placeholder="Password" required>
-                  
-                    <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
-                  
-                    <select id="category" required>
-                      <option value="">Select Work Category</option>
-                      <option>Electrician</option>
-                      <option>Plumber</option>
-                      <option>Carpenter</option>
-                      <option>Painter</option>
-                      <option>Cleaner</option>
-                    </select>
-                  
-                    <input id="city" type="text" placeholder="City / Area" required>
-                  
-                    <button type="submit">Join as Worker</button>
-                  </form>
-                  
-                </div>
-              </div>
-            <a href="#" class="book-btn">Book Now</a>
+            <button class="worker-btn" onclick="window.location.href='join.php'">
+              Join as Worker
+            </button>
+            <a href="login1.php" class="book-btn">Login</a>
         </div>
     </header>
     
-    
-    <h2>Ramesh – Plumber</h2>
-<p>Experience: 8 years</p>
-<p>Area: Madanapalle</p>
-<p>Charge: ₹300/hour</p>
+    <div class="page-header">
+        <h1>Worker Profile</h1>
+        <p>Know more about your selected professional</p>
+    </div>
 
-<h3>Skills</h3>
-<ul>
-    <li>Bathroom fitting</li>
-    <li>Pipe leakage repair</li>
-</ul>
+    <main class="page-container profile-content">
+        <div class="profile-details">
+            <h2>Ramesh – Plumber</h2>
+            <p><strong>Experience:</strong> 8 years</p>
+            <p><strong>Area:</strong> Madanapalle</p>
+            <p><strong>Charge:</strong> ₹300/hour</p>
 
-<button>Call Worker</button>
+            <h3>Skills</h3>
+            <ul>
+                <li>Bathroom fitting</li>
+                <li>Pipe leakage repair</li>
+                <li>Water heater installation</li>
+            </ul>
+
+            <button class="btn-primary" style="margin-top: 20px;">Call Worker Now</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 HandyHood. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
