@@ -15,6 +15,8 @@
         font-family: 'Poppins', sans-serif;
         }
     </style>
+    
+      
 </head>
 <body>
 
@@ -36,7 +38,40 @@
         <!--action buttons-->
         <div class="active-btn">
 
-            <a href="#" class="worker-btn">Join as Worker</a>
+            <button id="joinWorkerBtn" class="worker-btn">Join as Worker</button>
+
+            <div id="workerModal" class="modal">
+                <div class="modal-content">
+                  <span id="closeModal" class="close">&times;</span>
+              
+                  <h2>Join as Worker</h2>
+                  <form id="workerForm">
+                    <input id="fullName" type="text" placeholder="Full Name" required>
+                  
+                    <input id="mobile" type="tel" placeholder="Mobile Number" required>
+                  
+                    <input id="password" type="password" placeholder="Password" required>
+                  
+                    <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
+                  
+                    <select id="category" required>
+                      <option value="">Select Work Category</option>
+                      <option>Electrician</option>
+                      <option>Plumber</option>
+                      <option>Carpenter</option>
+                      <option>Painter</option>
+                      <option>Cleaner</option>
+                    </select>
+                  
+                    <input id="city" type="text" placeholder="City / Area" required>
+                  
+                    <button type="submit">Join as Worker</button>
+                  </form>
+                  
+                </div>
+              </div>
+              
+    
             <a href="#" class="book-btn">Book Now</a>
         </div>
     </header>
@@ -126,5 +161,7 @@
         <p>© 2026 HandyHood. All Rights Reserved.</p>
 
     </footer>
+    <script src="script.js"></script>
+
 </body>
 </html>
