@@ -42,6 +42,12 @@
 <div class="register-card">
   <h2>Join as Worker</h2>
 
+  <?php if(isset($_GET['success']) && $_GET['success'] == 1): ?>
+    <div style="background-color: #d4edda; color: #155724; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; border: 1px solid #c3e6cb; font-weight: 500;">
+        ✅ <strong>Registration Successful!</strong><br> Your profile and files have been securely stored in the database.
+    </div>
+  <?php endif; ?>
+
   <form id="workerForm" action="register1.php" method="POST" enctype="multipart/form-data">
 
     <div class="form-group">
