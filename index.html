@@ -1,167 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HandyHood | Local Services Near You</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HandyHood | Local Services Near You</title>
 
-    <style>
+  
+  <link rel="stylesheet" href="style.css"/>
+  
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
     body {
-        font-family: 'Inter', sans-serif;
-        }
+      font-family: 'Inter', sans-serif;
+    }
     h1, h2, h3, h4 {
-        font-family: 'Poppins', sans-serif;
-        }
-    </style>
-    
-      
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
+
 <body>
 
-    <!--header-->
-    <header class="navbar">
-        <div class="logo">
-            <img src="images/logo3.png" />
-            <span class="handy">Handy<span class="hood">Hood</span></span>
-          </div>
+<!--HEADER  -->
+<header class="navbar">
+  <div class="logo">
+    <img src="images/logo3.png" alt="HandyHood Logo">
+    <span class="handy">Handy<span class="hood">Hood</span></span>
+  </div>
 
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        
-        
-        </nav>
-        <!--action buttons-->
-        <div class="active-btn">
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-            <button id="joinWorkerBtn" class="worker-btn">Join as Worker</button>
+  <!-- Action buttons -->
+  <div class="active-btn">
+    <button class="worker-btn" onclick="window.location.href='join.html'">
+      Join as Worker
+    </button>
 
-            <div id="workerModal" class="modal">
-                <div class="modal-content">
-                  <span id="closeModal" class="close">&times;</span>
-              
-                  <h2>Join as Worker</h2>
-                  <form id="workerForm">
-                    <input id="fullName" type="text" placeholder="Full Name" required>
-                  
-                    <input id="mobile" type="tel" placeholder="Mobile Number" required>
-                  
-                    <input id="password" type="password" placeholder="Password" required>
-                  
-                    <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
-                  
-                    <select id="category" required>
-                      <option value="">Select Work Category</option>
-                      <option>Electrician</option>
-                      <option>Plumber</option>
-                      <option>Carpenter</option>
-                      <option>Painter</option>
-                      <option>Cleaner</option>
-                    </select>
-                  
-                    <input id="city" type="text" placeholder="City / Area" required>
-                  
-                    <button type="submit">Join as Worker</button>
-                  </form>
-                  
-                </div>
-              </div>
-              
-    
-            <a href="#" class="book-btn">Book Now</a>
-        </div>
-    </header>
-    
-    <!--hero section-->
+    <a href="login.html" class="book-btn">Login</a>
+  </div>
+</header>
 
-    <section class="hero">
-        <div class="hero-content">
-        <h1>Find Trusted Local Services Near You</h1>
-        <p>Connecting skilled local workers with your daily needs</p>
-        <div class="search-box">
-            <select>
-                <option>Select District</option>
-                <option>Adilabad</option>
-                <option>Nirmal</option>
-                <option>Karimnagar</option>
-                <option>Peddapally</option>
-                <option>jayashankar-bhupalpely</option>
-                <option>warangal-rural</option>
-                <option>warangal-urban</option>
-                <option>hyderabad</option>
-                <option>secendrabad</option>
-                <option>nalgonda</option>
-                <option>Khammam</option>
-                <option>mahubhubnagar</option>
-                <option>RangaReddy</option>
-                <option>Sangareddy</option>
-                
-            </select>
-            <select>
-                <option>Select Mandal</option>
-                <option>nekkonda</option>
-                <option>narsampet</option>
-                
 
-            </select>
-            <button class="search-btn">Find Services</button>
-        </div>
-        <div class="alert">
-            Need immediate help? <strong>Find available workers now!</strong>
-          </div>
-    
-        </div>
-    </section>
-    
+<section class="hero">
+  <div class="hero-content">
+    <h1>Find Trusted Local Services Near You</h1>
+    <p>Connecting skilled local workers with your daily needs</p>
 
-    <!--service categories-->
-    <section class="categories">
-        <h2>Service Categories</h2>
-    <div class="category-list">
-        <div class="category-card">Home Services</div>
-        <div class="category-card">Electrical & Plumbing</div>
-        <div class="category-card">Cleaning</div>
-        <div class="category-card">Construction</div>
-        <div class="category-card">Personal Services</div>
-        <div class="category-card">Emergency Services</div>
+    <div class="search-box">
+      <select>
+        <option>Select District</option>
+        <option>Adilabad</option>
+        <option>Nirmal</option>
+        <option>Karimnagar</option>
+        <option>Peddapally</option>
+        <option>Jayashankar Bhupalpally</option>
+        <option>Warangal Rural</option>
+        <option>Warangal Urban</option>
+        <option>Hyderabad</option>
+        <option>Secunderabad</option>
+        <option>Nalgonda</option>
+        <option>Khammam</option>
+        <option>Mahabubnagar</option>
+        <option>RangaReddy</option>
+        <option>Sangareddy</option>
+      </select>
+
+      <select>
+        <option>Select Mandal</option>
+        <option>Nekkonda</option>
+        <option>Narsampet</option>
+      </select>
+
+      <button class="search-btn">Find Services</button>
     </div>
+
+    <div class="alert">
+      Need immediate help? <strong>Find available workers now!</strong>
+    </div>
+  </div>
 </section>
 
 
-   <!--how it works-->
+<section class="categories">
+  <h2>Service Categories</h2>
+  <div class="category-list">
+    <div class="category-card">Home Services</div>
+    <div class="category-card">Electrical & Plumbing</div>
+    <div class="category-card">Cleaning</div>
+    <div class="category-card">Construction</div>
+    <div class="category-card">Personal Services</div>
+    <div class="category-card">Emergency Services</div>
+  </div>
+</section>
+
+
 <section class="how-it-works">
-    <h2>How HandyHood Works</h2>
-        <div class="steps">
-            <div>1. Choose Location</div>
-            <div>2. Select Service</div>
-            <div>3. Book Worker</div>
-            <div>4. Get Work Done</div>
-        </div>
-
+  <h2>How HandyHood Works</h2>
+  <div class="steps">
+    <div>1. Choose Location</div>
+    <div>2. Select Service</div>
+    <div>3. Book Worker</div>
+    <div>4. Get Work Done</div>
+  </div>
 </section>
 
-    <!--why choose us-->
+<section class="why-us">
+  <h2>Why Choose Us?</h2>
+  <ul>
+    <li>✔ Local Skilled Workers</li>
+    <li>✔ District & Mandal Based Services</li>
+    <li>✔ Affordable Pricing</li>
+    <li>✔ Verified Professionals</li>
+  </ul>
+</section>
 
-    <section class="why-us">
-         <h2>Why Choose Us?</h2>
-         <ul>
-            <li>✔ Local Skilled Workers</li>
-            <li>✔ District & Mandal Based Services<</li>
-            <li>✔ Affordable Pricing</li>
-            <li>✔ Verified Professionals</li>
-         </ul>
-    </section>
 
-    <!--footer-->
-    <footer>
-        <p>© 2026 HandyHood. All Rights Reserved.</p>
+<footer>
+  <p>© 2026 HandyHood. All Rights Reserved.</p>
+</footer>
 
-    </footer>
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
