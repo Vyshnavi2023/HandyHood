@@ -42,13 +42,16 @@
 <div class="register-card">
   <h2>Join as Worker</h2>
 
-  <form id="workerForm" action="register.php" method="POST" enctype="multipart/form-data">
+  <form id="workerForm" action="register1.php" method="POST" enctype="multipart/form-data">
 
     <div class="form-group">
       <label>Full Name</label>
       <input type="text" id="fullName" name="fullName" required>
     </div>
+     <div class="form-group">
+    <input type="email" name="email" placeholder="Enter your email" required>
 
+     </div>
     <div class="form-group">
       <label>Mobile Number</label>
       <input type="text" id="mobile" name="mobile" required>
@@ -95,6 +98,10 @@
   </form>
 </div>
 </div>
+<p style="text-align:center; margin-top:15px;">
+  Already have an account?
+  <a href="login1.php" style="color:#6a5acd; font-weight:600;">Login Here</a>
+</p>
 
 <script src="script.js"></script>
 </body>

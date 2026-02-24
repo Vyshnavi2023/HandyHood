@@ -5,6 +5,8 @@ ini_set('display_errors', 1);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $name     = trim($_POST["fullName"]);
+    $email = trim($_POST['email']);
+
     $mobile   = trim($_POST["mobile"]);
     $password = $_POST["password"];
     $category = $_POST["category"];
@@ -17,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if (
-        $name == "" || $mobile == "" || $password == "" ||
+        $name == "" || $email=="" || $mobile == "" || $password == "" ||
         $category == "" || $city == "" ||
         $idProofName == "" || $skillName == ""
     ) {
@@ -54,13 +56,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     
     $sql = "INSERT INTO workers 
-            (full_name, mobile, password, category, city, id_proof, skill_certificate)
-            VALUES (?, ?, ?, ?, ?, ?, ?)";
+            (full_name, email, mobile, password, category, city, id_proof, skill_certificate)
+            VALUES (?, ?, ?, ?, ?, ?, ?,?)";
 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param(
-        "sssssss",
+        "ssssssss",
         $name,
+        $email,
         $mobile,
         $hashedPassword,
         $category,
@@ -84,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $logFile = fopen("worker_log.txt", "a");
-    $logData = "Name: $name | Mobile: $mobile | Category: $category | City: $city\n";
+    $logData = "Name: $name | email: $email | Mobile: $mobile | Category: $category | City: $city\n";
     fwrite($logFile, $logData);
      fclose($logFile);
 
